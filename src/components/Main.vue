@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="main">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -10,7 +10,7 @@
       <br>
       <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2 class="blue">Ecosystem</h2>
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
@@ -21,14 +21,19 @@
 </template>
 
 <script>
+import TopBar from './Main';
+
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: 'Main',
+  components: {
+    TopBar,
+  },
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+      msg: 'Jason Groff',
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -46,5 +51,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.main {
+  background-color: gray;
+}
+.blue {
+  color: blue;
 }
 </style>
